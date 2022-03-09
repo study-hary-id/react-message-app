@@ -1,12 +1,12 @@
 import { Component } from "react";
 
 import './App.css';
-import MessageView from "./components/message-view";
+import MessageList from "./components/message-list";
 
 class App extends Component {
   render() {
     return (
-      <MessageView />
+      <MessageList />
     );
   }
 }
