@@ -3,12 +3,12 @@ h1 {
 }
 
 .container {
-  width: 800px;
+  width: 400px;
   margin: 0 auto;
 }
 
 .message {
-  background-color: #F7FAFC;
+  background-color: #f7fafc;
   width: 400px;
   margin-top: 20px;
   border-top: solid 2px #fff;
@@ -31,9 +31,9 @@ h1 {
 }
 
 .value {
-  color: #4A5568;
+  color: #4a5568;
 }
 
-.content .value {
+.text .value {
   font-style: italic;
 }
