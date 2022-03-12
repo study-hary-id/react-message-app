@@ -13,10 +13,10 @@ function Login() {
 
   return (
     <div className="container">
-      <h1>Login</h1>
+      <h1>{username ? username : "Login"}</h1>
       <form>
         <label>
-          <input type="text" placeholder="Username" />
+          <input type="text" placeholder="Username" onChange={handleUsernameChange} />
         </label>
         <label>
           <input type="password" placeholder="Password" />
