@@ -13,7 +13,7 @@ label {
   margin-bottom: 1.5rem;
 }
 
-input {
+.btn, input {
   border: 0;
   outline: 0;
   font-size: 1rem;
@@ -21,19 +21,35 @@ input {
   padding: 1rem;
   background-color: #edf2f7;
   text-shadow: 1px 1px 0 #fff;
+}
 
+input {
+  letter-spacing: -0.2px; /* For all text in this app */
   margin-right: 0.5rem;
   box-shadow: inset 2px 2px 5px #babecc,
     inset -5px -5px 10px #fff;
   width: 100%;
   box-sizing: border-box;
   transition: all 0.2s ease-in-out;
-
   appearance: none;
   -webkit-appearance: none;
 }
 
-input:focus {
+.btn {
+  color: #61677c;
+  font-weight: bold;
+  box-shadow: -5px -5px 20px #fff,
+    5px 5px 20px #babecc;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.btn:hover, .btn:focus {
+  box-shadow: -2px -2px 5px #fff,
+    2px 2px 5px #babecc;
+}
+
+input:focus, .btn:active {
   box-shadow: inset 1px 1px 2px #babecc,
     inset -1px -1px 2px #fff;
 }
