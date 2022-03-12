@@ -6,7 +6,10 @@ import MessageList from "./components/message-list";
 
 function App() {
   return (
-    <Login />
+    <>
+      <Login />
+      <MessageList />
+    </>
   );
 }
 
