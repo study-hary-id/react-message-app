@@ -1,6 +1,10 @@
 import React from "react";
+import { useState } from "react";
 
 function Login() {
+  document.title = "Login";
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
   return (
     <div className="container">
       <h1>Login</h1>
