@@ -6,6 +6,9 @@ function Login() {
   const [password, setPassword] = useState("");
   const [isValid, setIsValid] = useState(false);
 
+  useEffect(() => {
+    validateLogin();
+  }, [username, password]);
 
   const handleUsernameChange = e => {
     e.preventDefault();
@@ -17,6 +20,13 @@ function Login() {
     setPassword(e.target.value);
   };
 
+  const validateLogin = () => {
+    if (password.length >= 8 && username.length >= 8) {
+      setIsValid(true);
+    } else {
+      setIsValid(false);
+    }
+  };
 
   return (
     <div className="container">
