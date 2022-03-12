@@ -1,5 +1,4 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 function Login() {
   document.title = "Login";
@@ -11,15 +10,21 @@ function Login() {
     setUsername(e.target.value);
   };
 
+  const handlePasswordChange = e => {
+    e.preventDefault();
+    setPassword(e.target.value);
+  };
+
+
   return (
     <div className="container">
-      <h1>{username ? username : "Login"}</h1>
+      <h1>Login</h1>
       <form>
         <label>
           <input type="text" placeholder="Username" onChange={handleUsernameChange} />
         </label>
         <label>
-          <input type="password" placeholder="Password" />
+          <input type="password" placeholder="Password" onChange={handlePasswordChange} />
         </label>
         <input type="submit" name="Submit" className="btn" />
       </form>
