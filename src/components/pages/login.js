@@ -4,6 +4,8 @@ function Login() {
   document.title = "Login";
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [isValid, setIsValid] = useState(false);
+
 
   const handleUsernameChange = e => {
     e.preventDefault();
@@ -26,7 +28,12 @@ function Login() {
         <label>
           <input type="password" placeholder="Password" onChange={handlePasswordChange} />
         </label>
-        <input type="submit" name="Submit" className="btn" />
+        <input
+          type="submit"
+          name="Submit"
+          className="btn"
+          style={isValid ? {} : { display: "none" }}
+        />
       </form>
     </div>
   );
