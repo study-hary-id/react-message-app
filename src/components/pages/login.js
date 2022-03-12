@@ -5,6 +5,12 @@ function Login() {
   document.title = "Login";
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+
+  const handleUsernameChange = e => {
+    e.preventDefault();
+    setUsername(e.target.value);
+  };
+
   return (
     <div className="container">
       <h1>Login</h1>
